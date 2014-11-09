@@ -1,0 +1,23 @@
+author: Liam Middlebrook
+classifiers: []
+description: A python utility for downloading all OSI approved licenses in markdown
+  format
+directories: [/home/liam/repos/osi-licenses-full/osi-licenses-full, /home/liam/repos/osi-licenses-full/osi-licenses-full/docs,
+  /home/liam/repos/osi-licenses-full/osi-licenses-full/osi-licenses-full]
+docs_dir: /home/liam/repos/osi-licenses-full/osi-licenses-full/docs
+email: liammiddlebrook@gmail.com
+encoding: utf8
+files: [/home/liam/repos/osi-licenses-full/osi-licenses-full/MANIFEST.in, /home/liam/repos/osi-licenses-full/osi-licenses-full/setup.py,
+  /home/liam/repos/osi-licenses-full/osi-licenses-full/osi-licenses-full/__init__.py]
+init_file: null
+keywords: [osi, foss, markdown, license]
+license: MIT
+manifest: /home/liam/repos/osi-licenses-full/osi-licenses-full/MANIFEST.in
+name: osi-licenses-full
+project_dir: /home/liam/repos/osi-licenses-full/osi-licenses-full
+requires: ['']
+setup_file: /home/liam/repos/osi-licenses-full/osi-licenses-full/setup.py
+shortname: osi-licenses-full
+source_dir: /home/liam/repos/osi-licenses-full/osi-licenses-full/osi-licenses-full
+url: https://github.com/liam-middlebrook/osi-licenses-full
+version: 0.1.0
