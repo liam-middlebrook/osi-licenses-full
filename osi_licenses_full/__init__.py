@@ -1,4 +1,8 @@
 import argparse
+import os
+
+
+base_dir = os.path.dirname(__file__)
 
 def main():
     p = argparse.ArgumentParser()
@@ -10,5 +14,10 @@ def main():
 
     print license
 
+    licenseFile = os.path.join(base_dir, '../licenses/')
+    licenseFile = os.path.join(licenseFile, license)
+
+    with open(licenseFile) as licenseFile:
+        print licenseFile.read()
 if __name__ == '__main__':
     main()
