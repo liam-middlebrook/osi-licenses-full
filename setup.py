@@ -9,7 +9,7 @@ from setuptools import setup, find_packages
 version = "0.1.0"
 
 setup(
-    name="osi-licenses-full",
+    name="osi_licenses_full",
     version=version,
     description=("A python utility for downloading all OSI approved licenses "
         "in markdown format"),
@@ -30,8 +30,8 @@ setup(
         "",
     ],
     #TODO: Deal with entry_points
-    #entry_points="""
-    #[console_scripts]
-    #pythong = pythong.util:parse_args
-    #"""
+    entry_points={
+    'console_scripts' : [
+    'osi-licenses-full = osi_licenses_full:main'],
+    },
 )
