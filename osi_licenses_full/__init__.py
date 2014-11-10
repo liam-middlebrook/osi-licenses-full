@@ -1,6 +1,6 @@
 import argparse
 import os
-
+from fuzzywuzzy import process
 
 base_dir = os.path.dirname(__file__)
 
@@ -13,19 +13,26 @@ def main():
 
     license = args.license
 
-    print license
+    #print license
 
     licenseFile = os.path.join(base_dir, '../licenses/')
-    licenseFile = os.path.join(licenseFile, license[0])
+    licenseList = os.listdir(licenseFile)
+
+    licenseName = process.extractOne(license, licenseList)
+
+    print "License File:", licenseName[0]
+
+    licenseFile = os.path.join(licenseFile, licenseName[0])
 
     licenseText = None
 
     with open(licenseFile) as licenseFile:
         licenseText =  licenseFile.read()
+
     with open(args.outfile[0], 'w+') as outFile:
         outFile.write(licenseText)
 
-    print licenseText
+    #print licenseText
 
 if __name__ == '__main__':
     main()

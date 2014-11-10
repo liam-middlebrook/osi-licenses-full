@@ -27,7 +27,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        "",
+        "fuzzywuzzy",
     ],
     #TODO: Deal with entry_points
     entry_points={
