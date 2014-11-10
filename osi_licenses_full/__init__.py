@@ -6,17 +6,28 @@ base_dir = os.path.dirname(__file__)
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument('license', nargs=1, help="License to print the text of")
-    p.add_argument('outfile', nargs=1, help="The File to write to")
+
+    subparsers = p.add_subparsers(help="commands", dest='command')
+
+    list_parser = subparsers.add_parser('list', help="List Available Licenses")
+ 
+    create_parser = subparsers.add_parser('create', help="Create License File")
+
+    create_parser.add_argument('license', nargs=1, help="License to print the text of")
+    create_parser.add_argument('outfile', nargs=1, help="The File to write to")
 
     args = p.parse_args()
 
-    license = args.license
-
-    #print license
-
     licenseFile = os.path.join(base_dir, '../licenses/')
     licenseList = os.listdir(licenseFile)
+
+    if args.command == "list":
+        print "Available License Files"
+        for license in licenseList:
+            print license
+        return 
+
+    license = args.license
 
     licenseName = process.extractOne(license, licenseList)
 
