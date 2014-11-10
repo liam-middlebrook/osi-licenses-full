@@ -15,7 +15,7 @@ def main():
     print license
 
     licenseFile = os.path.join(base_dir, '../licenses/')
-    licenseFile = os.path.join(licenseFile, license)
+    licenseFile = os.path.join(licenseFile, license[0])
 
     with open(licenseFile) as licenseFile:
         print licenseFile.read()
