@@ -18,7 +18,7 @@ def main():
 
     args = p.parse_args()
 
-    licenseFile = os.path.join(base_dir, '../licenses/')
+    licenseFile = os.path.join(base_dir, '..', os.sep, 'licenses', os.sep)
     licenseList = os.listdir(licenseFile)
 
     if args.command == "list":
